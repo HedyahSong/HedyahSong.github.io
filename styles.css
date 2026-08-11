@@ -370,6 +370,20 @@ h1,
   border-top: 1px solid rgba(232, 233, 229, 0.38);
 }
 
+.project-role {
+  margin: 10px 0 0;
+  font-size: 11px;
+  line-height: 1.45;
+  letter-spacing: 0.035em;
+}
+
+.project-role span {
+  margin-right: 0.55em;
+  font-size: 9px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
 .project-copy {
   margin: clamp(30px, 4vw, 55px) 0 0;
   font-size: 15px;
@@ -448,6 +462,22 @@ h1,
   grid-column: 2 / span 9;
   margin-top: clamp(48px, 8vw, 115px);
   transform: rotate(-0.45deg);
+}
+
+.project-note-douyin {
+  grid-column: 1 / span 5;
+  margin-top: clamp(80px, 12vw, 170px);
+  transform: rotate(0.5deg);
+}
+
+.project-note-douyin h2 {
+  font-size: clamp(31px, 3.5vw, 52px);
+}
+
+.project-image-douyin {
+  grid-column: 6 / -1;
+  margin-top: clamp(135px, 18vw, 245px);
+  transform: rotate(-0.35deg);
 }
 
 .project-image-biennale-a {
@@ -637,6 +667,8 @@ h1,
   .project-note-ev-followup,
   .project-image-ev-optimism,
   .project-image-ev-rave,
+  .project-note-douyin,
+  .project-image-douyin,
   .project-image-biennale-a,
   .project-note-biennale,
   .project-note-archive,
@@ -652,7 +684,8 @@ h1,
   }
 
   .project-note h2,
-  .project-note-biennale h2 {
+  .project-note-biennale h2,
+  .project-note-douyin h2 {
     font-size: clamp(36px, 12vw, 50px);
   }
 
