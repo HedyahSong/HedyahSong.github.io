@@ -481,14 +481,14 @@ h1,
 }
 
 .project-image-biennale-a {
-  grid-column: 1 / span 8;
-  margin-top: clamp(28px, 4vw, 70px);
+  grid-column: 1 / span 7;
+  margin-top: clamp(80px, 12vw, 170px);
   transform: rotate(-0.35deg);
 }
 
 .project-note-biennale {
-  grid-column: 9 / -1;
-  margin-top: clamp(115px, 15vw, 220px);
+  grid-column: 8 / -1;
+  margin-top: clamp(135px, 17vw, 235px);
   transform: rotate(0.8deg);
 }
 
@@ -498,13 +498,13 @@ h1,
 
 .project-note-archive {
   grid-column: 2 / span 4;
-  margin-top: clamp(18px, 4vw, 60px);
+  margin-top: clamp(70px, 10vw, 140px);
   transform: rotate(0.55deg);
 }
 
 .project-image-biennale-b {
-  grid-column: 6 / -1;
-  margin-top: clamp(65px, 10vw, 145px);
+  grid-column: 3 / span 8;
+  margin-top: clamp(48px, 7vw, 105px);
   transform: rotate(-0.5deg);
 }
 
