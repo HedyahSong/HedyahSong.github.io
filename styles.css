@@ -496,22 +496,26 @@ h1,
   font-size: clamp(31px, 3.5vw, 52px);
 }
 
-.project-note-archive {
-  grid-column: 2 / span 4;
-  margin-top: clamp(70px, 10vw, 140px);
-  transform: rotate(0.55deg);
-}
-
 .project-image-biennale-b {
   grid-column: 3 / span 8;
   margin-top: clamp(48px, 7vw, 105px);
   transform: rotate(-0.5deg);
 }
 
-.project-image-archive {
-  grid-column: 1 / span 9;
-  margin-top: clamp(35px, 6vw, 90px);
-  transform: rotate(0.3deg);
+.project-note-greenpeace {
+  grid-column: 1 / span 5;
+  margin-top: clamp(85px, 12vw, 170px);
+  transform: rotate(0.45deg);
+}
+
+.project-note-greenpeace h2 {
+  font-size: clamp(29px, 3.2vw, 48px);
+}
+
+.project-image-greenpeace {
+  grid-column: 6 / -1;
+  margin-top: clamp(145px, 18vw, 245px);
+  transform: rotate(-0.35deg);
 }
 
 .body-copy {
@@ -671,9 +675,9 @@ h1,
   .project-image-douyin,
   .project-image-biennale-a,
   .project-note-biennale,
-  .project-note-archive,
   .project-image-biennale-b,
-  .project-image-archive {
+  .project-note-greenpeace,
+  .project-image-greenpeace {
     grid-column: 1;
     margin-top: 0;
     transform: rotate(0deg);
@@ -685,7 +689,8 @@ h1,
 
   .project-note h2,
   .project-note-biennale h2,
-  .project-note-douyin h2 {
+  .project-note-douyin h2,
+  .project-note-greenpeace h2 {
     font-size: clamp(36px, 12vw, 50px);
   }
 
