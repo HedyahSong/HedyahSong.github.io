@@ -518,6 +518,22 @@ h1,
   transform: rotate(-0.35deg);
 }
 
+.project-note-pengzhen {
+  grid-column: 1 / span 5;
+  margin-top: clamp(85px, 12vw, 170px);
+  transform: rotate(-0.4deg);
+}
+
+.project-note-pengzhen h2 {
+  font-size: clamp(31px, 3.5vw, 52px);
+}
+
+.project-image-pengzhen {
+  grid-column: 6 / -1;
+  margin-top: clamp(145px, 18vw, 245px);
+  transform: rotate(0.35deg);
+}
+
 .body-copy {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -677,7 +693,9 @@ h1,
   .project-note-biennale,
   .project-image-biennale-b,
   .project-note-greenpeace,
-  .project-image-greenpeace {
+  .project-image-greenpeace,
+  .project-note-pengzhen,
+  .project-image-pengzhen {
     grid-column: 1;
     margin-top: 0;
     transform: rotate(0deg);
@@ -690,7 +708,8 @@ h1,
   .project-note h2,
   .project-note-biennale h2,
   .project-note-douyin h2,
-  .project-note-greenpeace h2 {
+  .project-note-greenpeace h2,
+  .project-note-pengzhen h2 {
     font-size: clamp(36px, 12vw, 50px);
   }
 
