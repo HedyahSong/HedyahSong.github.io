@@ -3,151 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Hedyah Song</title>
-  <meta
-    name="description"
-    content="Hedyah Song is a curator, exhibition-maker and researcher based in Leeds, UK."
-  >
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      margin: 0;
-      width: 100%;
-      min-height: 100%;
-    }
-
-    body {
-      background: #edf0f2;
-      color: #18232e;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
-
-    .homepage {
-      position: relative;
-      width: 100%;
-      min-height: 100vh;
-      min-height: 100svh;
-      overflow: hidden;
-      background: #edf0f2;
-    }
-
-    .homepage-image {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    .homepage::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      background: rgba(250, 250, 247, 0.14);
-      -webkit-backdrop-filter: blur(0.3px) saturate(0.96) contrast(0.99);
-      backdrop-filter: blur(0.3px) saturate(0.96) contrast(0.99);
-      pointer-events: none;
-    }
-
-    .identity {
-      position: absolute;
-      z-index: 2;
-      left: 5vw;
-      top: 50%;
-      width: min(500px, 42vw);
-      transform: translateY(-50%);
-    }
-
-    h1 {
-      margin: 0 0 18px;
-      font-family: Baskerville, "Iowan Old Style", Georgia, serif;
-      font-size: clamp(38px, 4vw, 60px);
-      font-weight: 400;
-      line-height: 1;
-      letter-spacing: -0.025em;
-      white-space: nowrap;
-    }
-
-    .role {
-      max-width: 410px;
-      margin: 0 0 13px;
-      font-size: clamp(15px, 1.4vw, 20px);
-      line-height: 1.35;
-    }
-
-    .location {
-      margin: 0;
-      font-size: 12px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .index-mark {
-      position: absolute;
-      z-index: 2;
-      right: 34px;
-      bottom: 27px;
-      margin: 0;
-      color: #fff;
-      font-size: 10px;
-      letter-spacing: 0.09em;
-      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.22);
-    }
-
-    @media (max-width: 700px) {
-      .homepage-image {
-        object-position: 60% center;
-      }
-
-      .identity {
-        left: 20px;
-        right: 20px;
-        top: auto;
-        bottom: 56px;
-        width: auto;
-        transform: none;
-      }
-
-      h1 {
-        margin-bottom: 13px;
-      }
-
-      .role {
-        max-width: 300px;
-        font-size: 15px;
-      }
-
-      .index-mark {
-        right: 20px;
-        bottom: 20px;
-        font-size: 9px;
-      }
-    }
-  </style>
+  <meta name="description" content="Hedyah Song is a curator, exhibition-maker and researcher based in Leeds, UK.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="menu.js" defer></script>
 </head>
 
-<body>
-  <main class="homepage">
-    <img
-      class="homepage-image"
-      src="IMG_3406.jpg"
-      alt="An empty exhibition space with blue columns"
-    >
+<body class="home-page">
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation">
+    <span aria-hidden="true"></span>
+  </button>
 
+  <nav class="menu-panel" id="site-navigation" aria-hidden="true" aria-label="Primary navigation" inert>
+    <div class="menu-panel-inner">
+      <p class="menu-kicker">Hedyah Song</p>
+      <ul class="menu-list">
+        <li><span>01</span><a href="projects/">Projects</a></li>
+        <li><span>02</span><a href="research/">Research</a></li>
+        <li><span>03</span><a href="about/">About</a></li>
+        <li><span>04</span><a href="contact/">Contact</a></li>
+      </ul>
+      <a class="menu-home" href="./">Home</a>
+    </div>
+  </nav>
+
+  <main class="homepage">
+    <img class="homepage-image" src="IMG_3406.jpg" alt="An empty exhibition space with blue columns">
     <section class="identity">
       <h1>Hedyah Song</h1>
       <p class="role">Curator, exhibition-maker and researcher</p>
       <p class="location">Leeds, UK</p>
     </section>
-
     <p class="index-mark">Installation in progress, Photofairs Shanghai, 2025</p>
   </main>
 </body>
