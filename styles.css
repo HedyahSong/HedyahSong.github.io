@@ -2,7 +2,7 @@
   --ink: #18232e;
   --paper: #f2f2ef;
   --line: rgba(24, 35, 46, 0.22);
-  --note-blue: #315c78;
+  --note-blue: rgba(2, 0, 255, 0.9);
   --note-ink: #e8e9e5;
 }
 
@@ -84,7 +84,8 @@ a {
 .menu-list a:focus-visible,
 .menu-home:focus-visible,
 .site-name:focus-visible,
-.contact-link:focus-visible {
+.contact-link:focus-visible,
+.project-link:focus-visible {
   outline: 1px solid currentColor;
   outline-offset: 5px;
 }
@@ -375,6 +376,48 @@ h1,
   line-height: 1.58;
 }
 
+.project-copy-stacked p {
+  margin: 0 0 1em;
+}
+
+.project-copy-stacked p:last-child {
+  margin-bottom: 0;
+}
+
+.project-aims {
+  margin: 1.1em 0 0;
+  padding-left: 1.2em;
+  font-size: 15px;
+  line-height: 1.52;
+}
+
+.project-aims li + li {
+  margin-top: 0.65em;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: clamp(34px, 4vw, 54px);
+  padding-bottom: 3px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 1px solid currentColor;
+}
+
+.project-link:hover {
+  opacity: 0.72;
+}
+
+.project-section-label {
+  margin: 0 0 clamp(48px, 7vw, 90px);
+  font-size: 10px;
+  line-height: 1.45;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
 .project-image {
   padding: clamp(9px, 1vw, 14px);
 }
@@ -398,6 +441,24 @@ h1,
   grid-column: 6 / -1;
   margin-top: clamp(55px, 8vw, 115px);
   transform: rotate(0.45deg);
+}
+
+.project-note-ev-followup {
+  grid-column: 1 / span 5;
+  margin-top: clamp(30px, 5vw, 80px);
+  transform: rotate(0.4deg);
+}
+
+.project-image-ev-optimism {
+  grid-column: 6 / -1;
+  margin-top: clamp(95px, 13vw, 185px);
+  transform: rotate(-0.45deg);
+}
+
+.project-image-ev-rave {
+  grid-column: 2 / span 9;
+  margin-top: clamp(38px, 7vw, 100px);
+  transform: rotate(0.25deg);
 }
 
 .project-image-biennale-a {
@@ -584,6 +645,9 @@ h1,
 
   .project-note-ev,
   .project-image-ev,
+  .project-note-ev-followup,
+  .project-image-ev-optimism,
+  .project-image-ev-rave,
   .project-image-biennale-a,
   .project-note-biennale,
   .project-note-archive,
