@@ -1,0 +1,489 @@
+:root {
+  --ink: #18232e;
+  --paper: #f2f2ef;
+  --line: rgba(24, 35, 46, 0.22);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+}
+
+.menu-toggle {
+  position: fixed;
+  top: 27px;
+  left: 34px;
+  z-index: 101;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.home-page .menu-toggle {
+  color: #fff;
+  filter: drop-shadow(0 1px 5px rgba(0, 0, 0, 0.2));
+}
+
+.home-page.menu-open .menu-toggle {
+  color: var(--ink);
+  filter: none;
+}
+
+.menu-toggle::before,
+.menu-toggle::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 5px;
+  width: 22px;
+  height: 1px;
+  background: currentColor;
+  transition: transform 220ms ease;
+}
+
+.menu-toggle::after {
+  transform: rotate(90deg);
+}
+
+.menu-toggle[aria-expanded="true"]::before {
+  transform: rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"]::after {
+  transform: rotate(-45deg);
+}
+
+.menu-toggle:focus-visible,
+.menu-list a:focus-visible,
+.menu-home:focus-visible,
+.site-name:focus-visible,
+.contact-link:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 5px;
+}
+
+.menu-panel {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  visibility: hidden;
+  overflow-y: auto;
+  background: rgba(242, 242, 239, 0.97);
+  opacity: 0;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  transition: opacity 220ms ease, visibility 220ms ease;
+}
+
+.menu-panel.is-open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu-panel-inner {
+  display: flex;
+  flex-direction: column;
+  width: min(900px, calc(100% - 68px));
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0 auto;
+  padding: 28px 0 30px;
+}
+
+.menu-kicker,
+.menu-home {
+  margin: 0 0 9vh;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.menu-list {
+  width: 100%;
+  margin: auto 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.menu-list li {
+  display: grid;
+  grid-template-columns: 55px 1fr;
+  align-items: baseline;
+  border-bottom: 1px solid var(--line);
+}
+
+.menu-list span {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+.menu-list a {
+  padding: 15px 0 17px;
+  font-family: Baskerville, "Iowan Old Style", Georgia, serif;
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  text-decoration: none;
+}
+
+.menu-list a:hover {
+  font-style: italic;
+}
+
+.menu-home {
+  align-self: flex-end;
+  margin: 9vh 0 0;
+}
+
+.homepage {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow: hidden;
+  background: #edf0f2;
+}
+
+.homepage-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.homepage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(250, 250, 247, 0.14);
+  -webkit-backdrop-filter: blur(0.3px) saturate(0.96) contrast(0.99);
+  backdrop-filter: blur(0.3px) saturate(0.96) contrast(0.99);
+  pointer-events: none;
+}
+
+.identity {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 5vw;
+  width: min(500px, 42vw);
+  transform: translateY(-50%);
+}
+
+h1,
+.page-title {
+  font-family: Baskerville, "Iowan Old Style", Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+.identity h1 {
+  margin: 0 0 18px;
+  font-size: clamp(38px, 4vw, 60px);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.role {
+  max-width: 410px;
+  margin: 0 0 13px;
+  font-size: clamp(15px, 1.4vw, 20px);
+  line-height: 1.35;
+}
+
+.location {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.index-mark {
+  position: absolute;
+  z-index: 2;
+  right: 34px;
+  bottom: 27px;
+  margin: 0;
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 0.09em;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.22);
+}
+
+.page-shell {
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 27px 34px 48px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: flex-end;
+  min-height: 50px;
+}
+
+.site-name {
+  font-family: Baskerville, "Iowan Old Style", Georgia, serif;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+
+.page-content {
+  width: min(1050px, 100%);
+  margin: clamp(80px, 13vh, 150px) auto 0;
+}
+
+.page-heading {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.85fr) minmax(280px, 1.15fr);
+  gap: 8vw;
+  padding-bottom: clamp(55px, 9vh, 105px);
+}
+
+.page-title {
+  margin: 0;
+  font-size: clamp(58px, 8vw, 112px);
+  line-height: 0.86;
+}
+
+.page-intro {
+  align-self: end;
+  max-width: 560px;
+  margin: 0;
+  font-size: clamp(17px, 1.6vw, 22px);
+  line-height: 1.45;
+}
+
+.entry-list {
+  border-top: 1px solid var(--line);
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 70px minmax(210px, 0.8fr) minmax(280px, 1.2fr);
+  gap: 3vw;
+  padding: 24px 0 30px;
+  border-bottom: 1px solid var(--line);
+}
+
+.entry-number,
+.entry-meta {
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.entry h2 {
+  margin: 0;
+  font-family: Baskerville, "Iowan Old Style", Georgia, serif;
+  font-size: clamp(25px, 3vw, 40px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.entry-copy p,
+.body-copy p {
+  margin: 0 0 1em;
+  font-size: 15px;
+  line-height: 1.62;
+}
+
+.entry-copy p:last-child,
+.body-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.body-copy {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 8vw;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.research-title {
+  margin: 0 0 22px;
+  font-family: Baskerville, "Iowan Old Style", Georgia, serif;
+  font-size: clamp(25px, 3vw, 42px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.018em;
+}
+
+.research-meta {
+  margin: 0 0 22px;
+  font-size: 10px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.contact-block {
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+
+.contact-label {
+  margin: 0 0 15px;
+  font-size: 10px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.contact-link {
+  display: inline-block;
+  font-family: Baskerville, "Iowan Old Style", Georgia, serif;
+  font-size: clamp(26px, 4.5vw, 62px);
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  border-bottom: 1px solid var(--ink);
+}
+
+.contact-location {
+  margin: 22px 0 0;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+  .menu-toggle {
+    top: 17px;
+    left: 14px;
+  }
+
+  .menu-panel-inner {
+    width: calc(100% - 40px);
+    padding: 20px 0;
+  }
+
+  .menu-list li {
+    grid-template-columns: 36px 1fr;
+  }
+
+  .menu-list a {
+    padding: 14px 0 15px;
+    font-size: clamp(38px, 14vw, 58px);
+  }
+
+  .homepage-image {
+    object-position: 60% center;
+  }
+
+  .identity {
+    top: auto;
+    right: 20px;
+    bottom: 56px;
+    left: 20px;
+    width: auto;
+    transform: none;
+  }
+
+  .identity h1 {
+    margin-bottom: 13px;
+  }
+
+  .role {
+    max-width: 300px;
+    font-size: 15px;
+  }
+
+  .index-mark {
+    right: 20px;
+    bottom: 20px;
+    max-width: calc(100% - 40px);
+    font-size: 9px;
+    text-align: right;
+  }
+
+  .page-shell {
+    padding: 18px 20px 35px;
+  }
+
+  .site-name {
+    font-size: 16px;
+  }
+
+  .page-content {
+    margin-top: 80px;
+  }
+
+  .page-heading,
+  .body-copy {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .page-heading {
+    padding-bottom: 55px;
+  }
+
+  .page-title {
+    font-size: clamp(56px, 20vw, 82px);
+  }
+
+  .page-intro {
+    max-width: 92%;
+    font-size: 17px;
+  }
+
+  .entry {
+    grid-template-columns: 34px 1fr;
+    gap: 4px 12px;
+    padding: 20px 0 24px;
+  }
+
+  .entry-copy {
+    grid-column: 2;
+    margin-top: 16px;
+  }
+
+  .body-copy {
+    gap: 16px;
+  }
+
+  .contact-link {
+    font-size: clamp(24px, 8vw, 38px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-panel,
+  .menu-toggle::before,
+  .menu-toggle::after {
+    transition: none;
+  }
+}
