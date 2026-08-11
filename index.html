@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hedyah Song</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #f4f2ed;
+      color: #171717;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 5%;
+      border-bottom: 1px solid #bbb7ae;
+    }
+
+    .name {
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    nav a {
+      margin-left: 28px;
+      color: #171717;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      opacity: 0.55;
+    }
+
+    main {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .intro {
+      min-height: 72vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-bottom: 1px solid #bbb7ae;
+    }
+
+    .intro h1 {
+      max-width: 950px;
+      margin: 0 0 28px;
+      font-size: clamp(42px, 7vw, 92px);
+      font-weight: 400;
+      line-height: 1.03;
+      letter-spacing: -0.04em;
+    }
+
+    .intro p {
+      max-width: 650px;
+      margin: 0;
+      font-size: 18px;
+    }
+
+    section {
+      padding: 90px 0;
+      border-bottom: 1px solid #bbb7ae;
+    }
+
+    .section-title {
+      margin: 0 0 50px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .about-text {
+      max-width: 850px;
+      font-size: clamp(22px, 3vw, 36px);
+      line-height: 1.35;
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 50px;
+      padding: 32px 0;
+      border-top: 1px solid #bbb7ae;
+    }
+
+    .project h3 {
+      margin: 0;
+      font-size: 23px;
+      font-weight: 500;
+    }
+
+    .project p {
+      max-width: 720px;
+      margin: 0;
+    }
+
+    .project-meta {
+      margin-top: 12px !important;
+      color: #666;
+      font-size: 14px;
+    }
+
+    .contact {
+      min-height: 45vh;
+    }
+
+    .contact a {
+      color: #171717;
+      font-size: clamp(28px, 5vw, 58px);
+      text-decoration: none;
+      border-bottom: 2px solid #171717;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 30px 0;
+      color: #666;
+      font-size: 13px;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        align-items: flex-start;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+      }
+
+      nav a {
+        margin: 0 0 5px;
+      }
+
+      .project {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="name">Hedyah Song</div>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Selected Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Curator, exhibition-maker and researcher.</h1>
+      <p>
+        Working across contemporary art, anthropology and participatory
+        curatorial practice. Based in Leeds and Beijing.
+      </p>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About</h2>
+
+      <div class="about-text">
+        Hedyah Song is a curator, exhibition-maker and PhD researcher whose
+        practice explores how exhibitions, residencies and participatory
+        processes can operate as forms of research and knowledge production.
+        She has more than ten years of experience working with contemporary
+        art, photography and lens-based media.
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">Selected Projects</h2>
+
+      <article class="project">
+        <div>
+          <h3>EV+1</h3>
+          <p class="project-meta">Inter Art Center, Beijing · 2022–present</p>
+        </div>
+
+        <p>
+          A flexible exhibition series supporting emerging artists and
+          established practitioners testing unconventional approaches. The
+          project creates space for visual practices and social experiences
+          that are often difficult to accommodate within larger institutional
+          exhibitions.
+        </p>
+      </article>
+
+      <article class="project">
+        <div>
+          <h3>Chinese Visual Ethnographic Photo Biennale</h3>
+          <p class="project-meta">2020 and 2022</p>
+        </div>
+
+        <p>
+          Curatorial and exhibition work bringing photography into dialogue
+          with visual anthropology, ethnographic enquiry and changing forms
+          of everyday life.
+        </p>
+      </article>
+
+      <article class="project">
+        <div>
+          <h3>Everyday Lives and Practices Among Women in Nujiang</h3>
+          <p class="project-meta">Ongoing doctoral research</p>
+        </div>
+
+        <p>
+          A participatory arts-based study exploring women’s everyday lives
+          in Nujiang, Yunnan, in the context of regional development. The
+          research combines ethnographic enquiry with workshops, residencies
+          and collaborative forms of image-making.
+        </p>
+      </article>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2 class="section-title">Contact</h2>
+      <a href="https://github.com/HedyahSong">GitHub</a>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Hedyah Song</span>
+    <span>Leeds · Beijing</span>
+  </footer>
+</body>
+</html>
