@@ -519,8 +519,8 @@ h1,
 }
 
 .project-note-pengzhen {
-  grid-column: 1 / span 5;
-  margin-top: clamp(85px, 12vw, 170px);
+  grid-column: 8 / -1;
+  margin-top: clamp(145px, 18vw, 245px);
   transform: rotate(-0.4deg);
 }
 
@@ -529,9 +529,31 @@ h1,
 }
 
 .project-image-pengzhen {
+  grid-column: 1 / span 7;
+  margin-top: clamp(85px, 12vw, 170px);
+  transform: rotate(0.35deg);
+}
+
+.project-note-country-road {
+  grid-column: 1 / span 5;
+  margin-top: clamp(85px, 12vw, 170px);
+  transform: rotate(0.45deg);
+}
+
+.project-note-country-road h2 {
+  font-size: clamp(28px, 3vw, 45px);
+}
+
+.project-image-country-road-a {
   grid-column: 6 / -1;
   margin-top: clamp(145px, 18vw, 245px);
-  transform: rotate(0.35deg);
+  transform: rotate(-0.35deg);
+}
+
+.project-image-country-road-b {
+  grid-column: 2 / span 9;
+  margin-top: clamp(48px, 7vw, 105px);
+  transform: rotate(0.45deg);
 }
 
 .body-copy {
@@ -695,7 +717,10 @@ h1,
   .project-note-greenpeace,
   .project-image-greenpeace,
   .project-note-pengzhen,
-  .project-image-pengzhen {
+  .project-image-pengzhen,
+  .project-note-country-road,
+  .project-image-country-road-a,
+  .project-image-country-road-b {
     grid-column: 1;
     margin-top: 0;
     transform: rotate(0deg);
@@ -709,7 +734,8 @@ h1,
   .project-note-biennale h2,
   .project-note-douyin h2,
   .project-note-greenpeace h2,
-  .project-note-pengzhen h2 {
+  .project-note-pengzhen h2,
+  .project-note-country-road h2 {
     font-size: clamp(36px, 12vw, 50px);
   }
 
